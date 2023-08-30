@@ -22,5 +22,7 @@
     <orderEntry type="library" name="com.twelvemonkeys.imageio:imageio-iff:3.8.0" level="project" />
     <orderEntry type="library" name="image4j-0.7.2" level="project" />
     <orderEntry type="library" name="de.pentabyte:imageio-icns:1.2" level="project" />
+    <orderEntry type="library" name="com.twelvemonkeys.imageio:imageio-batik:3.2.1" level="project" />
+    <orderEntry type="library" name="org.apache.xmlgraphics:batik-transcoder:1.16" level="project" />
   </component>
 </module>
