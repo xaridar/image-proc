@@ -29,7 +29,9 @@ public class ReadFile implements ImageOperation {
         List<String> filePaths = (List<String>) args.get("files");
         List<FileInfo> out = new ArrayList<>();
         if (filePaths.size() == 1) {
-            DirectoryStream<Path> paths = Files.newDirectoryStream(Path.of(System.getProperty("user.dir")), filePaths.get(0));
+            String[] d = filePaths.get(0).split("[/\\\\]");
+            List<String> dl = List.of(d);
+            DirectoryStream<Path> paths = Files.newDirectoryStream(Path.of(System.getProperty("user.dir"), dl.subList(0, dl.size() - 1).toArray(String[]::new)), d[d.length - 1]);
             Iterator<Path> it = paths.iterator();
             if (!it.hasNext()) throw new ArgError("No files found matching: " + filePaths.get(0));
             while (it.hasNext()) {
@@ -87,5 +89,10 @@ public class ReadFile implements ImageOperation {
     @Override
     public String getDescr() {
         return "generation op (does not take input); reads any number of input files by filepath and converts them into a format accessible to all other operations";
+    }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.INPUT;
     }
 }
