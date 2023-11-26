@@ -86,4 +86,9 @@ public class Border implements ImageOperation {
     public String getDescr() {
         return "adds a solid color border to every input image as specified";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.TRANSFORM;
+    }
 }

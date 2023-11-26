@@ -75,4 +75,9 @@ public class Collate implements ImageOperation {
     public String getDescr() {
         return "combines all input images together in a grid of either automatic or specified dimensions";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.JOIN;
+    }
 }

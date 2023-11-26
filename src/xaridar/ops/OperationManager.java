@@ -1,9 +1,9 @@
 package xaridar.ops;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class OperationManager {
     public static List<ImageOperation> ops = List.of(
@@ -64,5 +64,18 @@ public class OperationManager {
         List<ImageOperation> temp = new ArrayList<>(ops);
         temp.sort((l, r) -> l.getName().compareToIgnoreCase(r.getName()));
         return temp;
+    }
+
+    public static List<ImageOperation> getGenOps() {
+        return alphaOps().stream().filter(op -> !op.inputNeeded()).collect(Collectors.toList());
+    }
+
+    public static Map<String, List<ImageOperation>> getCats() {
+        Map<String, List<ImageOperation>> cats = new HashMap<>();
+        alphaOps().stream().filter(op -> op.getCat() != ImageOperation.OperationCategory.NONE).forEach(op -> {
+            if (!cats.containsKey(op.getCat().title)) cats.put(op.getCat().title, new ArrayList<>());
+            cats.get(op.getCat().title).add(op);
+        });
+        return cats;
     }
 }

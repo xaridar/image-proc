@@ -29,4 +29,9 @@ public class UnsharpMask implements ImageOperation {
     public String getDescr() {
         return "applies an Unsharp Mask to inputs, increasing image contrast along edges";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

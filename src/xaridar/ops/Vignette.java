@@ -46,4 +46,9 @@ public class Vignette implements ImageOperation {
     public String getDescr() {
         return "applies a vignette filter to each input, which darkens pixels based on their proximity to the edge";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

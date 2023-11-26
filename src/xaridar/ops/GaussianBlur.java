@@ -55,4 +55,9 @@ public class GaussianBlur implements ImageOperation {
     public String getDescr() {
         return "applies a gaussian blur effect to every input";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

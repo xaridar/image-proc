@@ -35,4 +35,9 @@ public class CropEdge implements ImageOperation {
     public String getDescr() {
         return "crops all edges of input by the same number of pixels";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.TRANSFORM;
+    }
 }

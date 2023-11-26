@@ -1,7 +1,7 @@
 package xaridar.args;
 
 public class StringParam implements ParamType<String> {
-    String format = "";
+    public String format = "";
 
     public StringParam() {}
     public StringParam(String format) {

@@ -108,4 +108,9 @@ public class Iconify implements ImageOperation {
     public String getDescr() {
         return "outputs icon files for each input file according to literal or parameterized file names (these can be ICO and/or ICNS files)";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.OUTPUT;
+    }
 }

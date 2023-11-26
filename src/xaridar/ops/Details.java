@@ -31,4 +31,9 @@ public class Details implements ImageOperation {
     public String getDescr() {
         return "applies a details filter to obtain just the details of an image";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EDGE_DET;
+    }
 }

@@ -31,4 +31,9 @@ public class BoxBlur implements ImageOperation {
     public String getDescr() {
         return "a box blur, or linear blur, which linearly blurs each pixel with its surrounding pixels";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

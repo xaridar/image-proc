@@ -83,4 +83,9 @@ public class Solid implements ImageOperation {
     public String getDescr() {
         return "generation op (does not take input); creates a solid-color image of any color and size";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.INPUT;
+    }
 }

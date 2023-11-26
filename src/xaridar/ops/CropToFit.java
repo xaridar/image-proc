@@ -59,4 +59,9 @@ public class CropToFit implements ImageOperation {
     public String getDescr() {
         return "crops inputs to remove surrounding empty black, white, or transparent (as specified) areas around the edges";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.TRANSFORM;
+    }
 }

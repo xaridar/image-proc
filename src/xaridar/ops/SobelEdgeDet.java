@@ -72,4 +72,9 @@ public class SobelEdgeDet implements ImageOperation {
     public String getDescr() {
         return "runs the Sobel edge detection algorithm in all four directions for determining edges";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EDGE_DET;
+    }
 }

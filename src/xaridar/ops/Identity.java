@@ -28,4 +28,9 @@ public class Identity implements ImageOperation {
     public String getDescr() {
         return "returns a single copy of same image";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.NONE;
+    }
 }

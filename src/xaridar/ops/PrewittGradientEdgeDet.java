@@ -70,4 +70,9 @@ public class PrewittGradientEdgeDet implements ImageOperation {
     public String getDescr() {
         return "runs the Prewitt Gradient edge detection algorithm for determining edges";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EDGE_DET;
+    }
 }

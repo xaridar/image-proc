@@ -88,4 +88,9 @@ public class Kuwahara implements ImageOperation {
     public String getDescr() {
         return "applies a Kuwahara filter to each input, which provides smoothing and blurs edges and results in a look like a brush stroke";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.NDN;
+    }
 }

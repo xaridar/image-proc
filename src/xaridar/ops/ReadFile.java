@@ -21,7 +21,7 @@ public class ReadFile implements ImageOperation {
 
     @Override
     public ParamsList getParams() {
-        return new ParamsList(new UnnamedArgsInfo("files", new StringParam(), 1, true, "any number of relative filepaths to read images from"));
+        return new ParamsList(new UnnamedArgsInfo("files", new FileParam(), 1, true, "any number of relative filepaths to read images from"));
     }
 
     @Override

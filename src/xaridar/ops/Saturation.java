@@ -50,4 +50,9 @@ public class Saturation implements ImageOperation {
     public String getDescr() {
         return "edits the saturation of all input images";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.REBAL;
+    }
 }

@@ -91,4 +91,9 @@ public class NonLocalMeans implements ImageOperation {
     public String getDescr() {
         return "applies a non-local means denoising algorithm to inputs by using a gaussian kernel; this algorithm is SLOW so be warned";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.NDN;
+    }
 }

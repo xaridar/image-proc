@@ -54,4 +54,9 @@ public class Rotate implements ImageOperation {
     public String getDescr() {
         return "rotates inputs by a given degree measure and reshapes frames to match, if desired";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.TRANSFORM;
+    }
 }

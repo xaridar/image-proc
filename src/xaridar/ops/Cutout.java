@@ -41,4 +41,9 @@ public class Cutout implements ImageOperation {
     public String getDescr() {
         return "cuts out non-white (or non-black if specified) pixels from each input and places them on a transparent background";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.TRANSFORM;
+    }
 }

@@ -96,4 +96,9 @@ public class ColorLimit implements ImageOperation {
     public String getDescr() {
         return "limits the channels and/or luminance of all pixels in input images to fit within any specified ranges";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.COL_LIM;
+    }
 }

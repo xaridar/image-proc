@@ -54,4 +54,9 @@ public class Brightness implements ImageOperation {
     public String getDescr() {
         return "edits the brightness of all input images";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.REBAL;
+    }
 }

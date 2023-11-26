@@ -56,4 +56,9 @@ public class Add implements ImageOperation {
     public String getDescr() {
         return "adds all input images by pixel and returns a single image containing the result";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.JOIN;
+    }
 }

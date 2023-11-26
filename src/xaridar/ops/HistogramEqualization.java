@@ -54,4 +54,9 @@ public class HistogramEqualization implements ImageOperation {
     public String getDescr() {
         return "applies histogram equalization to each input, which spreads out luminosity evenly to improve contrast";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.REBAL;
+    }
 }

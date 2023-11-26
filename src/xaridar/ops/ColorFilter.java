@@ -56,10 +56,14 @@ public class ColorFilter implements ImageOperation {
                 for (int y = 0; y < image.getHeight(); y++) {
                     PixelColor pixelCol = PixelColor.fromRGBA(image.data[x][y]);
                     double lumMultiplier = pixelCol.luminance() * Math.exp(pixelCol.luminance()) + pixelCol.luminance();
-                    PixelColor newCol = pixelCol
-                            .withRed(pixelCol.getRed() + (int) (lumMultiplier * finalCol.getRed() * (intensity / 100)))
-                            .withGreen(pixelCol.getGreen() + (int) (lumMultiplier * finalCol.getGreen() * (intensity / 100)))
-                            .withBlue(pixelCol.getBlue() + (int) (lumMultiplier * finalCol.getBlue() * (intensity / 100)));
+                    PixelColor medColor = pixelCol
+                            .withRed((int) (pixelCol.getRedP() * finalCol.getRedP() * 255))
+                            .withGreen((int) (pixelCol.getGreenP() * finalCol.getGreenP() * 255))
+                            .withBlue((int) (pixelCol.getBlueP() * finalCol.getBlueP() * 255));
+                    PixelColor newCol = medColor
+                            .withRed((int) (pixelCol.getRed() * (1 - intensity / 100) + medColor.getRed() * (intensity / 100)))
+                            .withGreen((int) (pixelCol.getGreen() * (1 - intensity / 100) + medColor.getGreen() * (intensity / 100)))
+                            .withBlue((int) (pixelCol.getBlue() * (1 - intensity / 100) + medColor.getBlue() * (intensity / 100)));
                     out[x][y] = newCol.toRGBA();
                 }
             }
@@ -70,5 +74,10 @@ public class ColorFilter implements ImageOperation {
     @Override
     public String getDescr() {
         return "applies a filter of a specified color to each input image";
+    }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
     }
 }

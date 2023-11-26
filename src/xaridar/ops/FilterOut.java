@@ -71,4 +71,9 @@ public class FilterOut implements ImageOperation {
     public String getDescr() {
         return "filters out a specific pixel color from all input";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.COL_LIM;
+    }
 }

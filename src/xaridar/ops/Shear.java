@@ -48,4 +48,9 @@ public class Shear implements ImageOperation {
     public String getDescr() {
         return "shears inputs by a given set of factors and reshapes frames to match";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.TRANSFORM;
+    }
 }

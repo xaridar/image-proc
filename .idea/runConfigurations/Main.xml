@@ -2,7 +2,7 @@
   <configuration default="false" name="Main" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="xaridar.Main" />
     <module name="image-proc" />
-    <option name="PROGRAM_PARAMETERS" value="read ../../media/instagram-outline.svg $ write ../../media/instagram-outline1.png" />
+    <option name="PROGRAM_PARAMETERS" value="read test.jpg $ filter 100 -c red $ write test_out2" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

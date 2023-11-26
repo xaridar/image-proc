@@ -112,4 +112,9 @@ public class WriteFile implements ImageOperation {
         return "writes all input files to either separately designated filepaths or a single variable one using placeholders for index, type, etc\n" +
                 "output will default to each input's filetype, but can be specified as one of: png, jpg, jpeg, gif, bmp, tif, tiff, webp, pict, iff";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.OUTPUT;
+    }
 }

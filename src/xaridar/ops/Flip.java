@@ -39,4 +39,9 @@ public class Flip implements ImageOperation {
     public String getDescr() {
         return "flips inputs horizontally, vertically, or both";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.TRANSFORM;
+    }
 }

@@ -26,4 +26,8 @@ public class EnumParam implements ParamType<String> {
         if (options.contains(arg)) return ParsedArg.Valid(arg);
         return ParsedArg.Invalid();
     }
+
+    public List<String> getOptions() {
+        return options;
+    }
 }

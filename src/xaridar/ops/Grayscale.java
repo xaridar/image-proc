@@ -42,4 +42,9 @@ public class Grayscale implements xaridar.ops.ImageOperation {
     public String getDescr() {
         return "applies a grayscale filter, using pixel luminosity to determine gray value of each pixel";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

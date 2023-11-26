@@ -64,4 +64,9 @@ public class Quantize implements ImageOperation {
     public String getDescr() {
         return "returns each input quantized into either the average c colors or the specific colors chosen by replacing each pixel with the closest from the possibilities";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.COL_LIM;
+    }
 }

@@ -65,4 +65,9 @@ public class Hue implements ImageOperation {
     public String getDescr() {
         return "applies a hue filter to input, which converts each pixel into one of an equivalent luminosity of the provided hue";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

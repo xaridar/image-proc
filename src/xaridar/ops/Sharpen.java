@@ -32,4 +32,9 @@ public class Sharpen implements ImageOperation {
     public String getDescr() {
         return "applies a sharpening filter to every input, using a chosen radius to do so";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

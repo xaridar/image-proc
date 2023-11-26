@@ -37,4 +37,9 @@ public class Repeat implements ImageOperation {
     public String getDescr() {
         return "returns a specified number of copies of each input";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.NONE;
+    }
 }

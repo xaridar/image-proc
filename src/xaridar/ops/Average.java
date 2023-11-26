@@ -59,4 +59,9 @@ public class Average implements ImageOperation {
     public String getDescr() {
         return "averages all input images by pixel and returns a single image containing the result";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.JOIN;
+    }
 }

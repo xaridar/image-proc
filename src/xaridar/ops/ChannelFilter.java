@@ -49,4 +49,9 @@ public class ChannelFilter implements ImageOperation {
     public String getDescr() {
         return "returns each input image with only one or more color channels (r, g, b) included";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

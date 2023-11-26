@@ -49,4 +49,9 @@ public class Contrast implements ImageOperation {
     public String getDescr() {
         return "edits the contrast of all input images";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.REBAL;
+    }
 }

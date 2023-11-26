@@ -168,4 +168,9 @@ public class Scale implements ImageOperation {
     public String getDescr() {
         return "scales all input images to a specified dimension, either by stretching the image, placing the image in a larger frame, or cropping the image to fit";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.TRANSFORM;
+    }
 }

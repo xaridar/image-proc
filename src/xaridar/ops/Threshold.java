@@ -147,4 +147,9 @@ public class Threshold implements ImageOperation {
     public String getDescr() {
         return "returns only the pixels that match the given conditions, in a variety of output styles";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.COL_LIM;
+    }
 }

@@ -54,4 +54,9 @@ public class PerlinNoise implements ImageOperation {
     public String getDescr() {
         return "generation op (does not take input); generates perlin noise, which results in grayscale random noise that is more gradated and smooth than complete randomness";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.INPUT;
+    }
 }

@@ -17,6 +17,26 @@ public interface ImageOperation {
 
     String getDescr();
 
+    enum OperationCategory {
+        INPUT("Image Generation"),
+        REBAL("Balancing and Touchup"),
+        TRANSFORM("Transformations"),
+        EFFECTS("Image Effects and Filters"),
+        COL_LIM("Color Limiting"),
+        EDGE_DET("Edge Detection"),
+        NDN("Noise/Denoise"),
+        JOIN("Image Merging"),
+        OUTPUT("Image Output"),
+        NONE("");
+
+        String title;
+        OperationCategory(String title) {
+            this.title = title;
+        }
+    }
+
+    OperationCategory getCat();
+
     default boolean inputNeeded() {
         return true;
     }

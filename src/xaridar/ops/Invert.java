@@ -42,4 +42,9 @@ public class Invert implements ImageOperation {
     public String getDescr() {
         return "inverts the color of input images";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.EFFECTS;
+    }
 }

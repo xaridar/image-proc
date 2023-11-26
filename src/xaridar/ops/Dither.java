@@ -70,4 +70,9 @@ public class Dither implements ImageOperation {
     public String getDescr() {
         return "applies a dithering filter to input by quantizing it and applying smoothing";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.NDN;
+    }
 }

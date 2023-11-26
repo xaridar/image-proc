@@ -65,4 +65,9 @@ public class Mask implements ImageOperation {
     public String getDescr() {
         return "combines all inputs into a single image, in which all RGB channels are the sums of all images, and the A channel is the lowest transparency across the images";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.JOIN;
+    }
 }

@@ -51,4 +51,9 @@ public class SaltAndPepper implements ImageOperation {
     public String getDescr() {
         return "applies salt-and-pepper noise to inputs, which randomly converts some percentage of the pixels to either black or white";
     }
+
+    @Override
+    public OperationCategory getCat() {
+        return OperationCategory.NDN;
+    }
 }
