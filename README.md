@@ -1,6 +1,6 @@
 # ImageProc
 
-ImageProc is a image processing pipeline toolbox built for the paralle processing of large numbers of images. It allows a user to provide a single command to specify image input and output, and applies the desired operations.
+ImageProc is a image processing pipeline toolbox built for the parallel processing of large numbers of images. It allows a user to provide a single command to specify image input and output, and applies the desired operations.
 
 These operations may be applied sequentially after preceding operations, or at the same time through parallel processing. Through several [pipeline functions](#pipeline-functions), complex trees of image processing can be defined and executed without any additional input from the user.
 
