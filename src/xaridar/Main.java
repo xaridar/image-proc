@@ -17,8 +17,8 @@ public class Main {
             System.out.println(
                     "\nThe first operation of any sequence must be one in the 'Image Generation' category, which includes both file loading and specification of internal image generation.");
             System.out.println(
-                    "After images have been input, they can be put through any number of operations to edit or merge them, with any complexity of specified 'tree' using pipeline functions.");
-            System.out.println("To output images, use any 'zImage Output' operations. Both inputting and outputting images from files allow wildcards and template names for outputting multiple images.");
+                    "After images have been input, they can be put through any number of operations to edit or merge them, with any complexity of specified 'tree' using pipeline functions. These functions can cause operations to cause in sequence or parallel.");
+            System.out.println("To output images, use any 'Image Output' operations. Both inputting and outputting images from files allow wildcards and template names for outputting multiple images.");
         } else {
             CLI cli = new CLI();
             try {
