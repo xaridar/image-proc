@@ -82,11 +82,6 @@ public class ReadFile implements ImageOperation {
     }
 
     @Override
-    public boolean inputNeeded() {
-        return false;
-    }
-
-    @Override
     public String getDescr() {
         return "generation op (does not take input); reads any number of input files by filepath and converts them into a format accessible to all other operations";
     }

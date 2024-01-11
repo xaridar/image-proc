@@ -3,20 +3,15 @@ package xaridar;
 import xaridar.args.ArgError;
 import xaridar.args.ArgsObj;
 import xaridar.ops.ImageOperation;
+import xaridar.ops.ImageOperation.OperationCategory;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class AppManager {
 
     public static List<FileInfo> parseOp(ImageOperation operation, List<FileInfo> imgs, String[] args) throws ArgError, IOException, InterruptedException {
-        if (!operation.inputNeeded()) {
+        if (operation.getCat() == OperationCategory.INPUT) {
             if (imgs.size() > 0) throw new ArgError(operation.getName() + " does not use file inputs, so it should be placed at the beginning of the operation chain");
             return AppManager.parseOpNoInput(operation, args);
         }

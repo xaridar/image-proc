@@ -27,17 +27,13 @@ public interface ImageOperation {
         NDN("Noise/Denoise"),
         JOIN("Image Merging"),
         OUTPUT("Image Output"),
-        NONE("");
+        MISC("");
 
-        String title;
+        public String title;
         OperationCategory(String title) {
             this.title = title;
         }
     }
 
     OperationCategory getCat();
-
-    default boolean inputNeeded() {
-        return true;
-    }
 }

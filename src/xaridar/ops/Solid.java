@@ -75,11 +75,6 @@ public class Solid implements ImageOperation {
     }
 
     @Override
-    public boolean inputNeeded() {
-        return false;
-    }
-
-    @Override
     public String getDescr() {
         return "generation op (does not take input); creates a solid-color image of any color and size";
     }

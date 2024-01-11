@@ -38,6 +38,16 @@ public class CLI {
             for (ImageOperation op : OperationManager.alphaOps()) {
                 System.out.printf("%s - %s%n", op.getName(), op.getDescr());
             }
+            System.out.println("\nPipeline functions:");
+            System.out.println("$ - Separates operations to be processed on all inputs in sequence.");
+            System.out.println(
+                    "; - Separates operations to be processed in parallel on the same input, with each parallel chain producing separate outputs."
+            );
+            System.out.println(
+                    "~ - Returns both the output of the previous operation and that same output after the following operation has been applied.");
+            System.out.println(
+                    "+ - Used to separate n operations, where some integer multiple m of n inputs are provided; m inputs will be passed to each operation to be output.");
+            System.out.println("() - Parentheses can be used to specify precedence and operation grouping/nesting.");
         } else if (args.length == 2) {
             // operation specified
             String op = args[1];
@@ -48,6 +58,7 @@ public class CLI {
                 if (iOp == null) System.out.println("Operation not found: '" + op + "'.");
                 else {
                     System.out.printf("%s: %s%n", iOp.getName(), iOp.getDescr());
+                    System.out.printf("Category: %s%n", iOp.getCat().title);
                     ParamsList params = iOp.getParams();
                     System.out.println("\nParameters - ");
                     if (params.hasUnnamed()) {

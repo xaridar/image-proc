@@ -5,6 +5,8 @@ import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import xaridar.ops.ImageOperation.OperationCategory;
+
 public class OperationManager {
     public static List<ImageOperation> ops = List.of(
             new Add(),
@@ -67,12 +69,12 @@ public class OperationManager {
     }
 
     public static List<ImageOperation> getGenOps() {
-        return alphaOps().stream().filter(op -> !op.inputNeeded()).collect(Collectors.toList());
+        return alphaOps().stream().filter(op -> op.getCat() == OperationCategory.INPUT).collect(Collectors.toList());
     }
 
     public static Map<String, List<ImageOperation>> getCats() {
         Map<String, List<ImageOperation>> cats = new HashMap<>();
-        alphaOps().stream().filter(op -> op.getCat() != ImageOperation.OperationCategory.NONE).forEach(op -> {
+        alphaOps().stream().filter(op -> op.getCat() != ImageOperation.OperationCategory.MISC).forEach(op -> {
             if (!cats.containsKey(op.getCat().title)) cats.put(op.getCat().title, new ArrayList<>());
             cats.get(op.getCat().title).add(op);
         });

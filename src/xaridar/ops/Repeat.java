@@ -40,6 +40,6 @@ public class Repeat implements ImageOperation {
 
     @Override
     public OperationCategory getCat() {
-        return OperationCategory.NONE;
+        return OperationCategory.MISC;
     }
 }
